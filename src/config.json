@@ -1,0 +1,42 @@
+{
+  "output": "./../",
+  "plugins": [
+    "./node_modules/wintersmith-perian/"
+  ],
+  "locals": {
+    "url": "http://blog.mnewton.com",
+    "name": "Matthew Sojourner Newton",
+    "owner": "Matthew Sojourner Newton",
+    "description": "IT Consultant, &c",
+    "index_articles": 3,
+    "menu": [
+      {
+       "name": "Blog",
+       "description": "",
+       "url": "//blog.mnewton.com"
+      },
+      {
+       "name": "Projects",
+       "description": "",
+       "url": "/projects/"
+      },
+      {
+       "name": "Consult",
+       "description": "",
+       "url": "/consult/"
+      }
+    ],
+    "footer": [
+     {
+       "name": "Archive",
+       "description": "",
+       "url": "/archive/"
+      },
+      {
+       "name": "RSS",
+       "description": "",
+       "url": "http://feeds.feedburner.com/mnewt"
+      }
+    ]
+  }
+}

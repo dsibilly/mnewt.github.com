@@ -1,0 +1,14 @@
+{
+  "name": "blog.mnewton.com",
+  "version": "0.3.0",
+  "author": "Matthew Sojourner Newton <info@mnewton.com>",
+  "description": "Personal website",
+  "license": "MIT",
+  "dependencies": {
+    "wintersmith": "",
+    "wintersmith-perian": ""
+  },
+  "engine": {
+    "node": ">=0.6"
+  }
+}

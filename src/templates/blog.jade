@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  include author
+  include article-list
+  - var five = _(articles).first(2)
+  each article in five
+    article.post
+      h1
+        a(href=article.url)= article.title
+        small
+          br
+          mixin author(article.metadata.author)
+          |  (
+          = moment(article.date).format('D MMMM YYYY')
+          | )
+      section.content!= article.intro
+      if article.hasMore
+        p.read-more
+          a(href=article.url) read more
+      a(href=article.url + '#comment')
+        .comment
+          i comment
