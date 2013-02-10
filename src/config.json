@@ -3,6 +3,9 @@
   "plugins": [
     "./node_modules/wintersmith-perian/"
   ],
+  "ignore": [
+    "*/.DS_Store"
+  ],
   "locals": {
     "url": "http://blog.mnewton.com",
     "name": "Matthew Sojourner Newton",

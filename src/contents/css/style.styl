@@ -5,9 +5,9 @@ linkColor       = #35235D
 
 
 body
-  padding-top: 20px
+  padding-top: 1em
   font-family: 'Gilda Display', Georgia, serif
-  font-size: 18px
+  font-size: 15pt
   line-height: 1.5em
   color: textColor
   background-color: backgroundColor
@@ -26,7 +26,7 @@ a
 
 a:hover
   text-decoration: none
-  color: linkColor * .7
+  color: linkColor * 0.7
 
 li
   line-height: 1.3em
@@ -49,22 +49,18 @@ h4
   box-shadow: none
   border: none
 
-ul.nav.nav-pills li a
-  line-height: 23px
-
 .hero-unit h1, .hero-unit h2, .hero-unit h3
-  font-family: 'Give You Glory', Georgia, serif
-
+  font-family: 'Give You Glory', Helvetica, sans-serif
 
 .hero-unit h1
   font-size: 100px
   font-weight: normal
-  line-height: 80px
+  line-height: 75px
   margin-bottom: 0px
   color: textColor * 0.8
 
 .hero-unit h2
-  font-size: 58px
+  font-size: 60px
   font-weight: 100
   line-height: 50px
   margin-top: 0px
@@ -77,9 +73,8 @@ ul.nav.nav-pills li a
   font-size: 26px
 
 pre, code, pre code
-  font-size: 14px
+  font-size: 15px
   // background-color: backgroundColor * 0.9
-  background-repeat:repeat
   border: none
 
 .author a, .author a:hover
@@ -95,3 +90,11 @@ pre, code, pre code
 
 table.table tr td
   vertical-align: middle
+
+
+// for phone displays
+@media only screen and (max-device-width: 480px)
+  body
+    font-size: 24px
+  pre, code
+    font-size: 20px

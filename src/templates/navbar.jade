@@ -1,7 +1,9 @@
 .navbar
   .navbar-inner
     block logo
-      a.brand(href='/')= locals.name
+      ul.nav.nav-pills.pull-left
+        li
+          a.brand(href='//www.mnewton.com')= locals.name
     ul.nav.nav-pills.pull-right
       for item in locals.menu
         li(class=(item.url == page.url)? "active" : "")
