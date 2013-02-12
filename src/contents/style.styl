@@ -1,0 +1,111 @@
+// all colors are defined here (or derived from these)
+backgroundColor = #fcfcfc
+textColor       = #555
+linkColor       = #35235D
+
+
+body
+  padding-top: 1em
+  // font-family: 'Droid Serif', Georgia, serif
+  font-family: 'Averia Serif Libre', Georgia, serif
+  font-weight: 300
+  font-size: 15pt
+  line-height: 1.4em
+  color: textColor
+  background-color: backgroundColor
+
+// Custom container holds all page contents
+.container
+  // margin: 0 auto
+  max-width: 700px
+
+a
+  color: linkColor
+  // animate the anchor color on hover in/out
+  transition: color 0.5s ease-in-out
+  -moz-transition: color 0.5s ease-in-out
+  -webkit-transition: color 0.5s ease-in-out
+
+a:hover
+  text-decoration: none
+  color: linkColor * 0.7
+
+li
+  line-height: 1.3em
+
+h1, h2, h3, h4
+  margin-top: 1em
+  margin-bottom: 0.5em
+  font-weight: normal
+
+h1
+  font-family: 'Give You Glory', Georgia, serif
+
+h2
+  font-size: 28pt
+
+h3
+  font-size: 22pt
+
+h4
+  font-family: Monaco, Menlo, monospace
+  font-size: 14pt
+  font-weight: bold
+
+.navbar-inner, .navbar .nav .active a, .navbar .nav .active a:hover, .hero-unit
+  background-color: backgroundColor
+  background-image: none
+  filter: none
+  box-shadow: none
+  border: none
+  
+.hero-unit 
+  h1, h2, h3
+    font-family: 'Give You Glory', Helvetica, sans-serif
+
+  h1
+    font-size: 100px
+    font-weight: normal
+    line-height: 75px
+    margin-bottom: 0px
+    color: textColor * 0.8
+
+  h2
+    font-size: 60px
+    font-weight: 100
+    line-height: 50px
+    margin-top: 0px
+    color: textColor * 1.5
+
+  ul.inline
+    text-align: justify
+
+  h3
+    font-size: 26px
+
+pre, code, pre code
+  font-size: 15px
+  // background-color: backgroundColor * 0.9
+  border: none
+
+.author a, .author a:hover
+  color: textColor * 1.5
+  text-decoration: none
+
+.post
+  padding-top: 30px
+  padding-bottom: 50px
+
+.comment
+  text-align: center
+
+table.table tr td
+  vertical-align: middle
+
+
+// for phone displays
+@media only screen and (max-device-width: 480px)
+  body
+    font-size: 20pt
+  pre, code
+    font-size: 20px
