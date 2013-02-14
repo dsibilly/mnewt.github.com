@@ -1,10 +1,10 @@
 {
   "output": "./../",
   "plugins": [
-    "./node_modules/wintersmith-perian/"
+    "./node_modules/wintersmith-stylus/"
   ],
   "ignore": [
-    "*/.DS_Store"
+    "**/.DS_Store"
   ],
   "locals": {
     "url": "http://blog.mnewton.com",
@@ -16,24 +16,24 @@
       {
        "name": "Blog",
        "description": "",
-       "url": "//blog.mnewton.com"
+       "url": "/"
       },
       {
        "name": "Projects",
        "description": "",
-       "url": "/projects/"
+       "url": "//www.mnewton.com/projects/"
       },
       {
        "name": "Consult",
        "description": "",
-       "url": "/consult/"
+       "url": "//www.mnewton.com/consult/"
       }
     ],
     "footer": [
      {
        "name": "Archive",
        "description": "",
-       "url": "//blog.mnewton.com/archive/"
+       "url": "/archive/"
       },
       {
        "name": "RSS",
