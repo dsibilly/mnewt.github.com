@@ -3,7 +3,7 @@ extends layout
 block content
   include author
   include article-list
-  - var five = _(articles).first(2)
+  - var five = _(articles).first(locals.indexarticles)
   each article in five
     article.post
       h1
