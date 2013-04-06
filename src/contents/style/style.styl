@@ -2,6 +2,7 @@
 backgroundColor = #fcfcfc
 textColor       = #555
 linkColor       = #35235D
+headlineColor   = #777
 
 
 body
@@ -37,6 +38,7 @@ h1, h2, h3, h4
   margin-bottom: 0.3em
   font-weight: 300
   line-height: 1em
+  color: headlineColor
 
 h1
   font-family: 'Give You Glory', Georgia, serif
@@ -99,6 +101,11 @@ pre, code, pre code
 .post
   padding-top: 30px
   padding-bottom: 50px
+
+.content > p:first-child
+  color: textColor * 1.2
+  font-style: italic
+  font-size: 1.1em
 
 .comment
   text-align: center
