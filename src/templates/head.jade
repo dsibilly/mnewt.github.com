@@ -4,19 +4,21 @@ meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 meta(name='description', content=locals.description)
 meta(name='author', content=locals.name)
 
-// styles
-link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.no-icons.min.css')
-//- link(rel='stylesheet', href='/css/bootstrap-no-icons.css')
-//- link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css')
-//- link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Give+You+Glory|Droid+Serif:400,700,400italic')
-link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Give+You+Glory|Averia+Serif+Libre:300,400,700,400italic')
-
-link(rel='stylesheet', href='/css/style.css')
-link(rel='stylesheet', href='//yandex.st/highlightjs/7.3/styles/tomorrow.min.css')
-
 // xml feed
-link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+link(rel='alternate', href='//feeds.feedburner.com/mnewt', type='application/rss+xml', title=locals.description)
 
 // HTML5 shim, for IE 6-8 support of HTML elements
 //if lt IE 9
   script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+// styles
+link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.no-icons.min.css')
+//- local fallback
+//- script 
+//-   if(typeof($.fn.modal) === 'undefined') {
+//-     document.write('<script src="/script/bootstrap-no-icons.min.css"></script>');
+//-   }
+link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Give+You+Glory|Averia+Serif+Libre:300,400,700,400italic')
+
+link(rel='stylesheet', href='/style/style.css')
+link(rel='stylesheet', href='//yandex.st/highlightjs/7.3/styles/tomorrow.min.css')

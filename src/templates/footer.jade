@@ -11,15 +11,20 @@ footer
 //- scripts
 
 script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-//- script(src='/js/jquery.min.js')
-script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js')
-//- script(src='/js/bootstrap.min.js')
-//- pure javascript search feature (searches feed.xml and returns results via ajax)
-//- script(src='/js/search.js')
+//- local fallback
+//- script 
+//-   if(!window.jQuery) {
+//-     document.write('<script src="/script/jquery.min.js"></script>');
+//-   }
 
-//- script(src='/js/jsprettify-all-latest.js')
-//- script
-//-   window.jsprettify.run();
+script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js')
+//- script(src='/script/bootstrap.min.js')
+//- pure javascript search feature (searches feed.xml and returns results via ajax)
+//- script(src='/script/search.js')
+
+script(src='/script/jsprettify-all-latest.js')
+script
+  window.jsprettify.run();
 
 //- Google Analytics
 script
@@ -34,14 +39,4 @@ script
   })();
 
 //- Internet Defense League Cat Signal
-script
-  window._idl = {};
-  _idl.variant = "banner";
-  (function() {
-      var idl = document.createElement('script');
-      idl.type = 'text/javascript';
-      idl.async = true;
-      idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
-      document.getElementsByTagName('body')[0].appendChild(idl);
-  })();
-
+//- script(src="//dihq71mhvy8o7.cloudfront.net/js/banner-embed.js?v=1", type="text/javascript", charset="utf-8")

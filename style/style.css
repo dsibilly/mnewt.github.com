@@ -1,0 +1,123 @@
+body {
+  padding-top: 1em;
+  font-family: 'Averia Serif Libre', Georgia, serif;
+  font-weight: 300;
+  font-size: 16pt;
+  line-height: 1.5em;
+  color: #555;
+  background-color: #fcfcfc;
+}
+.container {
+  max-width: 700px;
+}
+a {
+  color: #35235d;
+  transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+  color: #251941;
+}
+li {
+  line-height: 1.3em;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 1.7em;
+  margin-bottom: 0.3em;
+  font-weight: 300;
+  line-height: 1em;
+}
+h1 {
+  font-family: 'Give You Glory', Georgia, serif;
+  font-size: 42pt;
+}
+h2 {
+  font-size: 28pt;
+}
+h3 {
+  font-size: 22pt;
+}
+h4 {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 14pt;
+  font-weight: bold;
+}
+img {
+  width: 100%;
+}
+.navbar-inner,
+.navbar .nav .active a,
+.navbar .nav .active a:hover,
+.hero-unit {
+  background-color: #fcfcfc;
+  background-image: none;
+  filter: none;
+  box-shadow: none;
+  border: none;
+}
+.hero-unit h1,
+.hero-unit h2,
+.hero-unit h3 {
+  font-family: 'Give You Glory', Helvetica, sans-serif;
+}
+.hero-unit h1 {
+  font-size: 100px;
+  font-weight: normal;
+  line-height: 75px;
+  margin-bottom: 0px;
+  color: #444;
+}
+.hero-unit h2 {
+  font-size: 57px;
+  font-weight: 100;
+  line-height: 57px;
+  margin-top: 0px;
+  color: #808080;
+}
+.hero-unit ul.inline {
+  text-align: justify;
+}
+.hero-unit p {
+  font-size: 16pt;
+}
+pre,
+code,
+pre code {
+  font-size: 11pt;
+  border: none;
+}
+.author a,
+.author a:hover {
+  color: #808080;
+  text-decoration: none;
+}
+.post {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.comment {
+  text-align: center;
+}
+table.table tr td {
+  vertical-align: middle;
+  line-height: 1.2em;
+}
+table.table tr td.td-date {
+  width: 140px;
+  vertical-align: top;
+  padding-top: 40px;
+}
+@media only screen and (max-device-width: 480px) {
+  body {
+    font-size: 20pt;
+  }
+  pre,
+  code {
+    font-size: 13pt;
+  }
+}
