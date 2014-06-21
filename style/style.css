@@ -1,76 +1,152 @@
+html {
+  background-color: #f5f3fa;
+}
 body {
   padding-top: 1em;
-  font-family: 'Averia Serif Libre', Georgia, serif;
-  font-weight: 300;
+  font-family: Georgia, serif;
   font-size: 16pt;
-  line-height: 1.5em;
+  line-height: 1.4em;
   color: #555;
-  background-color: #fcfcfc;
 }
 .container {
-  max-width: 700px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 a {
-  color: #35235d;
-  transition: color 0.5s ease-in-out;
-  -moz-transition: color 0.5s ease-in-out;
-  -webkit-transition: color 0.5s ease-in-out;
+  text-decoration: none;
+  color: #553d8a;
+  transition: color 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out;
+  -webkit-transition: color 1s ease-in-out;
 }
 a:hover {
   text-decoration: none;
-  color: #251941;
+  color: #3b2b61;
 }
-li {
+ul.inline {
+  padding: 0px;
+  margin-bottom: 5em;
+}
+ul.inline li {
+  display: inline-block;
   line-height: 1.3em;
+}
+.highlight1 {
+  background-color: #553d8a;
+}
+.highlight2 {
+  background-color: #755fa5;
+}
+.highlight3 {
+  background-color: #9e8dc4;
+}
+.highlight4 {
+  background-color: #beb3d5;
 }
 h1,
 h2,
 h3,
 h4 {
   margin-top: 1.7em;
-  margin-bottom: 0.3em;
-  font-weight: 300;
-  line-height: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0em;
   color: #777;
 }
 h1 {
-  font-family: 'Give You Glory', Georgia, serif;
-  font-size: 42pt;
+  font-family: Georgia, serif;
+  font-size: 48pt;
+  margin-top: 2.5em;
+  text-align: center;
+}
+h1 span {
+  background-color: #553d8a;
+  color: #f5f3fa;
+}
+h1 a {
+  color: #f5f3fa;
 }
 h2 {
   font-size: 28pt;
 }
+h2 span {
+  background-color: #755fa5;
+  color: #f5f3fa;
+}
 h3 {
   font-size: 22pt;
+}
+h3 span {
+  background-color: #9e8dc4;
+  color: #f5f3fa;
 }
 h4 {
   font-family: Monaco, Menlo, monospace;
   font-size: 14pt;
   font-weight: bold;
+  line-height: 1.3em;
+}
+h4 span {
+  background-color: #beb3d5;
+  color: #553d8a;
 }
 img {
   width: 100%;
 }
-.navbar-inner,
-.navbar .nav .active a,
-.navbar .nav .active a:hover,
+.header a {
+  color: #555;
+}
+.header .logo {
+  font-family: 'Give You Glory', Georgia, serif;
+  float: left;
+}
+.header nav {
+  display: inline-block;
+  float: right;
+}
+.header nav a {
+  display: inline-block;
+  width: 6em;
+}
+.header nav a.active {
+  color: #553d8a;
+}
+.header:after {
+  clear: both;
+}
+.clearboth {
+  clear: both;
+}
+.footer {
+  text-align: center;
+}
+.footer a {
+  display: inline-block;
+  margin-left: 2em;
+}
 .hero-unit {
-  background-color: #fcfcfc;
-  background-image: none;
-  filter: none;
-  box-shadow: none;
-  border: none;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 .hero-unit h1,
 .hero-unit h2,
 .hero-unit h3 {
   font-family: 'Give You Glory', Helvetica, sans-serif;
+  text-align: left;
+}
+.hero-unit h1 span,
+.hero-unit h2 span,
+.hero-unit h3 span {
+  background: transparent;
 }
 .hero-unit h1 {
   font-size: 100px;
   font-weight: normal;
   line-height: 75px;
   margin-bottom: 0px;
+}
+.hero-unit h1 span {
   color: #444;
 }
 .hero-unit h2 {
@@ -78,19 +154,12 @@ img {
   font-weight: 100;
   line-height: 57px;
   margin-top: 0px;
-  color: #808080;
 }
-.hero-unit ul.inline {
-  text-align: justify;
+.hero-unit h2 span {
+  color: #808080;
 }
 .hero-unit p {
   font-size: 16pt;
-}
-pre,
-code,
-pre code {
-  font-size: 11pt;
-  border: none;
 }
 .author a,
 .author a:hover {
@@ -101,6 +170,10 @@ pre code {
   padding-top: 30px;
   padding-bottom: 50px;
 }
+.byline {
+  text-align: center;
+  color: #888;
+}
 .content > p:first-child {
   color: #666;
   font-style: italic;
@@ -109,21 +182,145 @@ pre code {
 .comment {
   text-align: center;
 }
-table.table tr td {
-  vertical-align: middle;
-  line-height: 1.2em;
+.archive {
+  padding: 0px;
 }
-table.table tr td.td-date {
-  width: 140px;
+.archive li {
+  list-style-type: none;
+}
+.archive li .year {
+  display: table;
+  table-layout: fixed;
+}
+.archive li .year ul {
+  display: table-cell;
+}
+.archive li .year ul .month .month-label {
+  display: table-cell;
+  width: 5em;
+  text-align: right;
+}
+.archive li .year ul .month li.article {
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+.projects-list {
+  padding: 0px;
+  margin-top: 3em;
+}
+.projects-list li {
+  list-style-type: none;
+  margin-bottom: 5em;
+}
+.projects-list li .project {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.projects-list li .project .picture {
+  display: table-cell;
+  padding-right: 2em;
+}
+.projects-list li .project .body {
+  display: table-cell;
   vertical-align: top;
-  padding-top: 40px;
 }
-@media only screen and (max-device-width: 480px) {
-  body {
-    font-size: 20pt;
-  }
-  pre,
-  code {
-    font-size: 13pt;
-  }
+.projects-list li .project .body h3 {
+  margin-top: 0;
+}
+pre,
+code,
+pre code {
+  font-size: 11pt;
+  background-color: #fff;
+}
+code {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 0.85em;
+  color: #000;
+}
+pre code {
+  display: block;
+  line-height: 1.1;
+  border-style: solid;
+  border-radius: 0.4em;
+  border-width: 0.4em;
+  border-color: #c4c2c8;
+  overflow: scroll;
+}
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: #c4c2c8;
+  white-space: nowrap;
+}
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment,
+pre .comment,
+pre .title {
+  color: #8e908c;
+}
+.tomorrow-red,
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c82829;
+}
+.tomorrow-orange,
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f5871f;
+}
+.tomorrow-yellow,
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #eab700;
+}
+.tomorrow-green,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #718c00;
+}
+.tomorrow-aqua,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+.tomorrow-blue,
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #4271ae;
+}
+.tomorrow-purple,
+pre .keyword,
+pre .javascript .function {
+  color: #8959a8;
 }
