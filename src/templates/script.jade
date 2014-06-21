@@ -1,0 +1,19 @@
+//- Wrap contents of header elements with span so that they can be highlighted
+script(type='text/javascript').
+  var e = document.querySelectorAll("h1,h2,h3,h4");
+  for (i=0; i<e.length; i++) {
+    e[i].innerHTML = "<span>" + e[i].innerHTML + "</span>";
+  }
+
+
+//- Google Analytics
+script(type='text/javascript').
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32103756-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();

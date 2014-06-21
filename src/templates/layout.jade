@@ -1,19 +1,37 @@
-!!! 5
+doctype html
 html(lang='en')
   head
     block head
-      include head
+      //- document meta
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+
+      meta(name='description', content=locals.description)
+      meta(name='author', content=locals.name)
+
+      //- xml feed
+      link(rel='alternate', href='//feeds.feedburner.com/mnewt', type='application/rss+xml', title=locals.description)
+
+      //- HTML5 shim, for IE 6-8 support of HTML elements
+      //-if lt IE 9
+        script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+      //- styles
+      link(rel='stylesheet', href='/style/style.css')
+      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Give+You+Glory')
+
       title
         block title
           = locals.name
   body
     .container
       block header
-        include navbar
+        include header
 
-      //- prettify tag is for jsprettify
-      #content.prettify
-        block content
+      block content
 
       block footer
         include footer
+
+    include script

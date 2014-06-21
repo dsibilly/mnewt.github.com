@@ -1,98 +1,174 @@
+// Global Settings
+
 // all colors are defined here (or derived from these)
-backgroundColor = #fcfcfc
+// backgroundColor = #fdfdfd
+backgroundColor = #F5F3FA
+// backgroundColor = #E4F5EF
 textColor       = #555
-linkColor       = #35235D
+// linkColor       = #35235D
+linkColor       = #553D8A
+linkColor2      = #755FA5
+linkColor3      = #9E8DC4
+linkColor4      = #BEB3D5
+highlightColor  = #DE5224
 headlineColor   = #777
 
 
-body
-  padding-top: 1em
-  font-family: 'Averia Serif Libre', Georgia, serif
-  font-weight: 300
-  font-size: 16pt
-  line-height: 1.5em
-  color: textColor
+html
   background-color: backgroundColor
 
-// Custom container holds all page contents
+body
+  padding-top: 1em
+  font-family: Georgia, serif
+  font-size: 16pt
+  line-height: 1.4em
+  color: textColor
+
+// container holds all page contents
 .container
-  // margin: 0 auto
-  max-width: 700px
+  margin-left: 5%
+  margin-right: 5%
 
 a
+  text-decoration: none
   color: linkColor
   // animate the anchor color on hover in/out
-  transition: color 0.5s ease-in-out
-  -moz-transition: color 0.5s ease-in-out
-  -webkit-transition: color 0.5s ease-in-out
+  transition: color 1s ease-in-out
+  -moz-transition: color 1s ease-in-out
+  -webkit-transition: color 1s ease-in-out
 
 a:hover
   text-decoration: none
   color: linkColor * 0.7
+  // background-color: highlightColor
 
-li
-  line-height: 1.3em
+ul.inline
+  padding: 0px
+  margin-bottom: 5em
+  li
+    display: inline-block
+    line-height: 1.3em
+
+// highlights are used mainly inside header tags
+.highlight1
+  background-color: linkColor
+
+.highlight2
+  background-color: linkColor2
+
+.highlight3
+  background-color: linkColor3
+
+.highlight4
+  background-color: linkColor4
 
 h1, h2, h3, h4
   margin-top: 1.7em
-  margin-bottom: 0.3em
-  font-weight: 300
-  line-height: 1em
+  font-weight: normal
+  line-height: 1.2em
+  margin-bottom: 0em
   color: headlineColor
 
 h1
-  font-family: 'Give You Glory', Georgia, serif
-  font-size: 42pt
+  font-family: Georgia, serif
+  font-size: 48pt
+  margin-top: 2.5em
+  text-align: center
+  span
+    background-color: linkColor
+    color: backgroundColor
+  a
+    color: backgroundColor
 
 h2
   font-size: 28pt
-
+  span
+    background-color: linkColor2
+    color: backgroundColor
 h3
   font-size: 22pt
-
+  span
+    background-color: linkColor3
+    color: backgroundColor
 h4
   font-family: Monaco, Menlo, monospace
   font-size: 14pt
   font-weight: bold
+  line-height: 1.3em
+  span
+    background-color: linkColor4
+    color: linkColor
 
 img
   width: 100%
 
-.navbar-inner, .navbar .nav .active a, .navbar .nav .active a:hover, .hero-unit
-  background-color: backgroundColor
-  background-image: none
-  filter: none
-  box-shadow: none
-  border: none
-  
-.hero-unit 
+
+// Header
+
+.header
+  a
+    color: textColor
+  .logo
+    font-family: 'Give You Glory', Georgia, serif
+    float: left
+  nav
+    display: inline-block
+    float: right
+    a
+      display: inline-block
+      width: 6em
+    a.active
+      color: linkColor
+
+.header:after
+  clear: both
+
+.clearboth
+  clear: both
+
+
+// Footer
+
+.footer
+  text-align: center
+  a
+    display: inline-block
+    margin-left: 2em
+
+
+// Hero Unit
+
+.hero-unit
+  margin-top:   10%
+  margin-left:  15%
+  margin-right: 15%
   h1, h2, h3
     font-family: 'Give You Glory', Helvetica, sans-serif
+    text-align: left
+    span
+      background: transparent
 
   h1
     font-size: 100px
     font-weight: normal
     line-height: 75px
     margin-bottom: 0px
-    color: textColor * 0.8
+    span
+      color: textColor * 0.8
 
   h2
     font-size: 57px
     font-weight: 100
     line-height: 57px
     margin-top: 0px
-    color: textColor * 1.5
-
-  ul.inline
-    text-align: justify
+    span
+      color: textColor * 1.5
 
   p
     font-size: 16pt
 
-pre, code, pre code
-  font-size: 11pt
-  // background-color: backgroundColor * 0.9
-  border: none
+
+// Article (and Main Blog Page)
 
 .author a, .author a:hover
   color: textColor * 1.5
@@ -102,6 +178,10 @@ pre, code, pre code
   padding-top: 30px
   padding-bottom: 50px
 
+.byline
+  text-align: center
+  color: textColor * 1.6
+
 .content > p:first-child
   color: textColor * 1.2
   font-style: italic
@@ -110,19 +190,118 @@ pre, code, pre code
 .comment
   text-align: center
 
-table.table tr td
-  vertical-align: middle
-  line-height: 1.2em
 
-table.table tr td.td-date
-  width: 140px
-  vertical-align:top
-  padding-top: 40px
+// Archive
+
+.archive
+  padding: 0px
+  li
+    list-style-type: none
+    .year
+      display: table
+      table-layout: fixed
+      // margin-bottom: 0.7em
+      .year-label
+        // width: 3em
+      ul
+        display: table-cell
+        .month
+          // display: table
+          // margin-bottom: 1em
+          .month-label
+            display: table-cell
+            width: 5em
+            text-align: right
+          li.article
+            width: 100%
+            padding-bottom: .5em
 
 
-// for phone displays
-@media only screen and (max-device-width: 480px)
-  body
-    font-size: 20pt
-  pre, code
-    font-size: 13pt
+// Projects
+
+.projects-list
+  padding: 0px
+  margin-top: 3em
+  li
+    list-style-type: none
+    margin-bottom: 5em
+    .project
+      display: table
+      table-layout: fixed
+      width: 100%
+      .picture
+        display: table-cell
+        padding-right: 2em
+      .body
+        display: table-cell
+        vertical-align: top
+        h3
+          margin-top: 0
+
+
+// Code Blocks
+
+pre, code, pre code
+  font-size: 11pt
+  background-color: backgroundColor * 1.2
+
+code {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 0.85em;
+  color: #000;
+}
+
+pre code {
+  display: block;
+  line-height: 1.1;
+  border-style: solid
+  border-radius: 0.4em
+  border-width: 0.4em
+  border-color: backgroundColor * 0.8
+  overflow: scroll;
+}
+
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: backgroundColor * 0.8
+  white-space: nowrap;
+}
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+  color: #8e908c;
+}
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: #c82829;
+}
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: #f5871f;
+}
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: #eab700;
+}
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: #718c00;
+}
+
+.tomorrow-aqua, pre .css .hexcolor {
+  color: #3e999f;
+}
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: #4271ae;
+}
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+  color: #8959a8;
+}
