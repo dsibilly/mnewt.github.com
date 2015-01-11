@@ -22,11 +22,6 @@
       }
     ],
     "footer": [
-     {
-       "name": "Archive",
-       "description": "",
-       "url": "//blog.mnewton.com/archive/"
-      },
       {
        "name": "RSS",
        "description": "",
@@ -38,9 +33,8 @@
   "ignore": [
     "**/.DS_Store"
   ],
-  "__comment": "explicit reference to plugin.coffee is because of wintersmith-stylus not being updated to suport coffee-script 1.7",
   "plugins": [
-    "./node_modules/wintersmith-stylus/plugin.coffee"
+    "./node_modules/wintersmith-stylus/"
   ],
   "require": {
     "moment": "moment",

@@ -1,18 +1,21 @@
 {
   "name": "www.mnewton.com",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Matthew Sojourner Newton <contact@mnewton.com>",
   "description": "Personal website",
-  "license": "MIT",
   "dependencies": {
-    "wintersmith": "git://github.com/mnewt/wintersmith.git",
     "wintersmith-stylus": "",
-    "moment": "2.x",
-    "underscore": "1.x",
-    "typogr": "0.x"
+    "moment": "",
+    "underscore": "",
+    "typogr": "",
+    "wintersmith": "~2.1.0",
+    "wintersmith-livereload": "~0.1.1"
   },
   "engine": {
-    "node": ">=0.10"
+    "node": ""
   },
-  "repository": "none"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mnewt/blog.mnewton.com.git"
+  }
 }

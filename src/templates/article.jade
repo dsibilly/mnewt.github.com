@@ -6,9 +6,10 @@ block prepend title
 block content
   include author
   article.post
-    h1= page.title
-    .byline= moment(page.date).format('D MMMM YYYY')
+    h1!= typogr(page.title).typogrify()
+    p.byline
+      span= moment(page.date).format('D MMMM YYYY')
       //- mixin author(page.metadata.author)
-    section.content!= typogr(page.html).typogrify()
+    section.articleContent!= typogr(page.html).typogrify()
   a(name='comment')
   include comments

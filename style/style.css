@@ -8,9 +8,13 @@ body {
   line-height: 1.4em;
   color: #555;
 }
-.container {
+.body {
   margin-left: 5%;
   margin-right: 5%;
+}
+.content {
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 a {
   text-decoration: none;
@@ -93,23 +97,27 @@ h4 span {
 img {
   width: 100%;
 }
-.header a {
-  color: #555;
+a > .caps {
+  color: #553d8a;
 }
-.header .logo {
+.header span.logo {
   font-family: 'Give You Glory', Georgia, serif;
   float: left;
+  display: block;
+  width: 45%;
 }
-.header nav {
-  display: inline-block;
+.header span.logo a {
+  color: #555;
+}
+.header span.nav {
   float: right;
+  display: block;
+  width: 55%;
+  text-align: right;
 }
-.header nav a {
-  display: inline-block;
-  width: 6em;
-}
-.header nav a.active {
-  color: #553d8a;
+.header span.nav a {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .header:after {
   clear: both;
@@ -166,16 +174,19 @@ img {
   color: #808080;
   text-decoration: none;
 }
-.post {
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
 .byline {
+  margin-top: 1pt;
   text-align: center;
-  color: #888;
+  font-size: 16pt;
+  font-family: Monaco, Menlo, monospace;
 }
-.content > p:first-child {
-  color: #666;
+.byline span {
+  background-color: #beb3d5;
+  color: #553d8a;
+}
+.articleContent > p:first-child,
+.articleBlurb {
+  color: #777;
   font-style: italic;
   font-size: 1.1em;
 }
@@ -245,7 +256,7 @@ pre code {
   border-style: solid;
   border-radius: 0.4em;
   border-width: 0.4em;
-  border-color: #c4c2c8;
+  border-color: #fff;
   overflow: scroll;
 }
 p code {
@@ -253,7 +264,7 @@ p code {
   border-radius: 0.3em;
   position: relative;
   top: -0.15em;
-  background: #c4c2c8;
+  background: #fff;
   white-space: nowrap;
 }
 /* Tomorrow Theme */
@@ -323,4 +334,79 @@ pre .coffeescript .title {
 pre .keyword,
 pre .javascript .function {
   color: #8959a8;
+}
+@media screen and (max-width: 800px) {
+  .header {
+    text-align: center;
+  }
+  .header .logo {
+    font-family: 'Give You Glory', Georgia, serif;
+    float: none;
+    clear: both;
+  }
+  .header nav {
+    display: inline-block;
+    float: none;
+    clear: both;
+  }
+  .header nav a {
+    margin: 0.5em;
+    width: auto;
+  }
+  .header span.logo {
+    float: none;
+    display: inline;
+    text-align: center;
+  }
+  .header span.nav {
+    float: none;
+    display: inline;
+    text-align: center;
+  }
+  .header span.nav a {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24pt;
+  }
+  .hero-unit {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .hero-unit h1,
+  .hero-unit h2,
+  .hero-unit h3 {
+    font-family: 'Give You Glory', Helvetica, sans-serif;
+    text-align: left;
+  }
+  .hero-unit h1 span,
+  .hero-unit h2 span,
+  .hero-unit h3 span {
+    background: transparent;
+  }
+  .hero-unit h1 {
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 45px;
+    margin-bottom: 0px;
+  }
+  .hero-unit h1 span {
+    color: #444;
+  }
+  .hero-unit h2 {
+    font-size: 26px;
+    font-weight: 100;
+    line-height: 34px;
+    margin-top: 0px;
+  }
+  .hero-unit h2 span {
+    color: #808080;
+  }
+  .hero-unit p {
+    font-size: 16pt;
+  }
 }

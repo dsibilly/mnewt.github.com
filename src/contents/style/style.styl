@@ -24,10 +24,14 @@ body
   line-height: 1.4em
   color: textColor
 
-// container holds all page contents
-.container
+// body holds all page contents
+.body
   margin-left: 5%
   margin-right: 5%
+  
+.content
+  padding-top: 150px
+  padding-bottom: 50px
 
 a
   text-decoration: none
@@ -101,24 +105,29 @@ h4
 
 img
   width: 100%
+  
+a > .caps
+  color: linkColor
 
 
 // Header
 
 .header
-  a
-    color: textColor
-  .logo
+  span.logo
     font-family: 'Give You Glory', Georgia, serif
-    float: left
-  nav
-    display: inline-block
-    float: right
     a
-      display: inline-block
-      width: 6em
-    a.active
-      color: linkColor
+      color: textColor
+    float: left
+    display: block
+    width: 45%
+  span.nav
+    float: right
+    display: block;
+    width: 55%;
+    text-align: right;
+    a
+      padding-left: 1em
+      padding-right: 1em
 
 .header:after
   clear: both
@@ -175,15 +184,20 @@ img
   text-decoration: none
 
 .post
-  padding-top: 30px
-  padding-bottom: 50px
+  // padding-top: 0px
+  // padding-bottom: 50px
 
 .byline
+  margin-top: 1pt
   text-align: center
-  color: textColor * 1.6
+  font-size: 16pt
+  font-family: Monaco, Menlo, monospace
+  span
+    background-color: linkColor4
+    color: linkColor
 
-.content > p:first-child
-  color: textColor * 1.2
+.articleContent > p:first-child, .articleBlurb
+  color: textColor * 1.4
   font-style: italic
   font-size: 1.1em
 
@@ -243,7 +257,7 @@ img
 
 pre, code, pre code
   font-size: 11pt
-  background-color: backgroundColor * 1.2
+  background-color: backgroundColor  * 1.1
 
 code {
   font-family: Monaco, Menlo, monospace;
@@ -257,7 +271,7 @@ pre code {
   border-style: solid
   border-radius: 0.4em
   border-width: 0.4em
-  border-color: backgroundColor * 0.8
+  border-color: backgroundColor * 1.1
   overflow: scroll;
 }
 
@@ -266,9 +280,10 @@ p code {
   border-radius: 0.3em;
   position: relative;
   top: -0.15em;
-  background: backgroundColor * 0.8
+  background: backgroundColor * 1.1
   white-space: nowrap;
 }
+
 
 /* Tomorrow Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
@@ -305,3 +320,75 @@ p code {
 .tomorrow-purple, pre .keyword, pre .javascript .function {
   color: #8959a8;
 }
+
+
+
+
+
+
+// responsive sizing
+@media screen and (max-width: 800px)
+  .header
+    .logo
+      font-family: 'Give You Glory', Georgia, serif
+      float: none
+      clear: both
+    .logo:after
+      br
+    text-align: center
+    nav
+      display: inline-block
+      float: none
+      clear: both
+      a
+        margin: 0.5em
+        width: auto
+    
+    span.logo
+      float: none
+      display: inline
+      text-align: center
+    span.nav
+      float: none
+      display: inline
+      text-align: center
+      a
+        padding-left: 0em
+        padding-right: 0em
+
+
+@media screen and (max-width: 480px)
+  h1
+    font-size: 24pt
+  .hero-unit
+    margin-top:   0%
+    margin-left:  0%
+    margin-right: 0%
+    h1, h2, h3
+      font-family: 'Give You Glory', Helvetica, sans-serif
+      text-align: left
+      span
+        background: transparent
+
+    h1
+      font-size: 60px
+      font-weight: normal
+      line-height: 45px
+      margin-bottom: 0px
+      span
+        color: textColor * 0.8
+
+    h2
+      font-size: 26px
+      font-weight: 100
+      line-height: 34px
+      margin-top: 0px
+      span
+        color: textColor * 1.5
+
+    p
+      font-size: 16pt
+
+    
+
+

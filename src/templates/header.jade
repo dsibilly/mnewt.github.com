@@ -1,15 +1,14 @@
 .header
   block logo
-    .logo
+    span.logo
       a(href=locals.url)= locals.name
   block nav
-    nav
-      for item in locals.menu
-        //- tag current page nav item with "active" class
-        //- a(href=item.url, title=item.description, class=(item.url.indexOf(page.url)) > -1 ? "active" : "")
-        a(href=item.url, title=item.description, class="active")
-          | #{ item.name }
-        //- li
-          //-   form(id='search_form', class='navbar-search')
-          //-       input(id='query', type='text', class='input-mini search-query', placeholder='Search')
-    br
+    span.nav
+      nav(role="navigation")
+        for item in locals.menu
+          //- tag current page nav item with "active" class
+          //- a(href=item.url, title=item.description, class=(item.url.indexOf(page.url)) > -1 ? "active" : "")
+          a(href=item.url, title=item.description)= item.name
+          //- li
+            //-   form(id='search_form', class='navbar-search')
+            //-       input(id='query', type='text', class='input-mini search-query', placeholder='Search')

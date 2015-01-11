@@ -2,16 +2,25 @@ extends layout
 
 block content
   include author
+  h1 Blog
   each article in articles
-    article.post
-      h1
-        a(href=article.url)= article.title
-      .byline #{ moment(article.date).format('D MMMM YYYY') }
-      //- mixin author(article.metadata.author)
-      section.content!= article.intro
-      if article.hasMore
-        p.read-more
-          a(href=article.url) read more
-      a(href=article.url + '#comment')
-        .comment
-          i comment
+      article.post
+        h3
+          a(href=article.url)!= typogr(article.title).typogrify()
+          |&nbsp;
+          span.byline= moment(article.date).format('D MMMM YYYY')
+        //- mixin author(article.metadata.author)
+        section.articleBlurb
+          //- remove all tags from article html, essentially converting to plan text
+          - var articleBlurb = article.html.replace(/(<([^>]+)>)/ig,"")
+          //- keep only the first characters
+          - articleBlurb = articleBlurb.substr(0, 150) + "..."
+          != typogr(articleBlurb).typogrify()
+  br
+  if prevPage
+    a(href=prevPage.url) « Previous Page
+  if nextPage
+    a(href=nextPage.url) Next Page »
+
+
+      

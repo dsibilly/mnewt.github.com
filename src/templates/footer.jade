@@ -1,11 +1,9 @@
 block footer
   .footer
     nav
-      p= locals.owner
+      p
+        = locals.owner
         for item in locals.footer
           //- a(href=item.url, title=item.description, class=(item.url.indexOf(page.url)) > -1 ? "active" : "")
           a(href=item.url, title=item.description)
             | #{ item.name }
-    //- p This work is licensed under a 
-    //-   a(rel="license" href="http://creativecommons.org/licenses/by/4.0/")
-    //-     | Creative Commons Attribution 4.0 International License
